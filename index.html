@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arilst2021 | Holo Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        html { scroll-behavior: smooth; }
+        body {
+            background: linear-gradient(-45deg, #0a0c10, #131722, #0f0b1e, #0a0c10);
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
+        }
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        .text-holo {
+            background: linear-gradient(to right, #00f2ff, #7000ff, #ff00de, #00f2ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-size: 200% auto;
+            animation: holoText 4s linear infinite;
+        }
+        @keyframes holoText {
+            to { background-position: 200% center; }
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 0 20px rgba(0, 242, 255, 0.05);
+        }
+        .glass-card:hover {
+            border: 1px solid rgba(0, 242, 255, 0.4);
+            box-shadow: 0 0 30px rgba(0, 242, 255, 0.2);
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fade { animation: fadeIn 1s ease-out forwards; }
+    </style>
+</head>
+<body class="text-white font-sans selection:bg-cyan-500 selection:text-black min-h-screen">
+
+    <!-- Navigasi -->
+    <nav class="fixed top-0 w-full p-6 flex justify-between items-center z-50 bg-black/40 backdrop-blur-lg border-b border-white/5">
+        <div class="font-bold tracking-[0.4em] text-holo uppercase text-sm px-4">ARILST2021</div>
+        <div class="hidden md:flex space-x-8 text-[10px] uppercase tracking-widest mr-4">
+            <a href="#work" class="hover:text-cyan-400 transition-colors">Work</a>
+            <a href="#" class="hover:text-cyan-400 transition-colors">About</a>
+            <a href="#" class="hover:text-cyan-400 transition-colors">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="flex items-center justify-center min-h-screen pt-20">
+        <div class="text-center p-12 md:p-16 glass-card rounded-[60px] max-w-lg mx-4 animate-fade">
+            <div class="w-28 h-28 bg-gradient-to-tr from-cyan-400 via-purple-500 to-pink-500 rounded-full mx-auto mb-8 p-[2px] shadow-[0_0_30px_rgba(0,242,255,0.3)]">
+                <div class="w-full h-full bg-gray-900 rounded-full overflow-hidden border-2 border-black/20">
+                    <img src="https://www.roblox.com/headshot-thumbnail/image?userId=2636502129&width=420&height=420&format=png" alt="Aril Avatar" class="w-full h-full object-cover">
+                </div>
+            </div>
+            <h1 class="text-5xl font-black mb-4 tracking-tighter italic uppercase">Halo, Saya <span class="text-holo">Aril</span></h1>
+            <p class="text-cyan-100/60 mb-10 text-sm leading-relaxed tracking-wide">
+                Roblox Developer & Digital Creator.<br>
+                <span class="text-cyan-400">Luau Specialist</span> — <span class="text-purple-400">Environment Designer</span>
+            </p>
+            <div class="flex flex-col space-y-4 px-6">
+                <a href="#work" class="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-10 py-4 rounded-2xl font-black uppercase tracking-widest hover:shadow-[0_0_25px_rgba(0,242,255,0.5)] hover:scale-[1.02] transition-all duration-300 text-[11px]">
+                    Explore My Work
+                </a>
+            </div>
+            <div class="mt-12 flex items-center justify-center space-x-2 opacity-40">
+                <span class="w-1.5 h-1.5 bg-cyan-400 rounded-full animate-pulse shadow-[0_0_10px_cyan]"></span>
+                <p class="text-[9px] uppercase tracking-[0.4em]">System Online</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Selected Work Section -->
+    <section id="work" class="py-32 px-8 max-w-6xl mx-auto">
+        <h2 class="text-3xl font-black mb-20 tracking-widest text-center italic uppercase">Selected <span class="text-holo">Files</span></h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+            <!-- Project 1: A2 Music System -->
+            <div class="group glass-card p-8 rounded-[50px] transition-all duration-500">
+                <div class="aspect-video bg-black/60 rounded-[30px] mb-8 overflow-hidden relative border border-white/5">
+                    <!-- Mengacu pada image_91154c.png -->
+                    <img src="image_91154c.png" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                </div>
+                <h3 class="text-2xl font-bold mb-3 tracking-tight group-hover:text-cyan-400 transition-colors italic uppercase">A2 Music System</h3>
+                <p class="text-gray-400 text-sm mb-8 leading-relaxed font-light">Professional-grade DJ controller dengan Dual Deck, 3-Band EQ, dan fitur Queue canggih.</p>
+                <span class="text-[9px] border border-cyan-500/30 text-cyan-400 px-5 py-2 rounded-full uppercase font-bold tracking-widest">Luau Scripting / UI</span>
+            </div>
+
+            <!-- Project 2: A2 Carry System -->
+            <div class="group glass-card p-8 rounded-[50px] transition-all duration-500">
+                <div class="aspect-video bg-black/60 rounded-[30px] mb-8 overflow-hidden relative border border-white/5">
+                    <!-- Mengacu pada image_b08e5c.png -->
+                    <img src="image_b08e5c.png" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                </div>
+                <h3 class="text-2xl font-bold mb-3 tracking-tight group-hover:text-purple-400 transition-colors italic uppercase">A2 Carry System</h3>
+                <p class="text-gray-400 text-sm mb-8 leading-relaxed font-light">Sistem interaksi dua pemain dengan Auto Weld, Anti-Abuse Guard, dan UI yang sepenuhnya responsif.</p>
+                <span class="text-[9px] border border-purple-500/30 text-purple-400 px-5 py-2 rounded-full uppercase font-bold tracking-widest">Interaction System</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-20 text-center border-t border-white/5">
+        <p class="text-[10px] text-gray-500 uppercase tracking-[0.8em] font-medium">
+            © 2026 <span class="text-white">NTT Studio</span> & <span class="text-white">A2 Studio</span>
+        </p>
+    </footer>
+
+</body>
+</html>
